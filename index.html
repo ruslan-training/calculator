@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <title>Calculator</title>
+</head>
+<body>
+<div id="app">
+  <div class="calc">
+    <div class="input-box">
+      <div class="logo">VueJS Calculator</div>
+      <input type="text" @keyup.enter='calc' v-model='result' placeholder="0">
+    </div>
+    <div class="numbers-btn">
+      <button class="btn" @click='input(num)' v-for='num in numbers'>{{num}}</button>
+      <button class="calc-btn btn" @click='calc'>=</button>
+    </div>
+    <div class="system-btn">
+      <div class="operation-btn">
+        <button class="btn-oper btn" @click='input(op)' v-for='op in operation'>{{op}}</button>
+      </div>  
+
+        <button class="btn-res btn" @click='reset'>CE</button>
+        
+    </div>  
+    </div>
+</div>
+    
+</body>
+<script src="script.js"></script>
+</html>
